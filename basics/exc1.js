@@ -118,3 +118,8 @@ var c = person.showMessage4();
 document.getElementById("car").innerHTML=a;
 document.getElementById("animal").innerHTML = b;
  document.getElementById("person").innerHTML = c;
+
+
+
+ // Classes:
+ 
