@@ -1,9 +1,21 @@
-// Exercise 1
+// I solved 2 questions in 1 reply  see two questions below.
+
+// Objects: Exercise 1 
 // Create 3 different objects for 3 different themes:  car, animal and person. The end result should be 9 objects in total.  These objects should have some properties like name, brand, model, type, color, weight, age... of course inherent to its type because, for instance, an animal has no brand... 
 
 // Each object should have at least one method, that shows some properties about each theme. Feel free to expand on that.
 
 // The message from the methods must be printed on the browser too.
+
+// Classes - Basic
+// Exercise 1
+// Create 3 different classes:  car, animal and person. These classes should have some properties like name, brand, model, type, color, weight, age... of course inherent to its type because, for instance, an animal has no brand... 
+
+// Each class should have at least one method, that shows some properties about each theme. Feel free to expand on that.
+
+// Create, using the classes, 3 different objects for each class.
+
+// The results from the methods must be printed on the browser too.
 
 class Person {
     city;
