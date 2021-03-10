@@ -110,5 +110,11 @@ var animal = new Basic("Nina", "European", "cat", "yellow", "3KG", 4, "Vienna");
 var person = new Basic("Vali", "human", "AI and ML Engineer", "white", "85Kg", "25", "Vienna" )
 
 console.log(car.showMessage4());
+var a = car.showMessage4();
 console.log(animal.showMessage4());
+var b =  animal.showMessage4();
 console.log(person.showMessage4());
+var c = person.showMessage4();
+document.getElementById("car").innerHTML=a;
+document.getElementById("animal").innerHTML = b;
+ document.getElementById("person").innerHTML = c;
