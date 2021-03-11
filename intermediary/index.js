@@ -15,10 +15,6 @@ var person_3=new Person('Layla',25,'Psychologist')
 
 let everyPerson=[person_1,person_2,person_3]
 
-// console.log(everyPerson[2].showMessage())
-// console.log(person_2.showMessage())
-
-// console.log(typeof (document.getElementById('person')))
 
 
 
@@ -46,13 +42,8 @@ let placeIn=document.getElementById('person')
 for(i=0;i<everyEmployee.length;i++){
     placeIn.innerHTML += "<li>"+everyEmployee[i].showMessage()+ "</li>";
 }
-console.log(employee2.showMessage())
-console.log(employee3.showMsgTwo())
-
-
-
-
-
+/* console.log(employee2.showMessage())
+console.log(employee3.showMsgTwo()) */
 
 
 
@@ -61,33 +52,68 @@ console.log(employee3.showMsgTwo())
 
 // ANIMALS
 
-// let dog={
-//     class:'mammalia',
-//     species:'lupis',
-//     printSpecies:function(){
-//         return ` Dogs are from the species of ${this.species}`
-//     }
+class Cat {
 
-// }
+    constructor(name, species){
+        this.animalName = name;
+        this.species = species;
+    }
+    showMessage(){
+        return `${this.animalName} has a cat class of ${this.species}`;
+    }
 
-// let cat={
-//     class:'mammalia',
-//     species:'catus',
-//     printClass: function(){
-//         return `Cats have an animal class of ${this.class}`
-//     }
-// }
+    getAnimalName(){
+        return this.animalName;
+    }
+    getAnimalSpecies(){
+        return this.species;
+    }
+}
 
-// console.log(cat.printClass())
+var tigerCat=new Cat('TigerCat','Catus')
+console.table(tigerCat)
 
-// let dogPlace=document.getElementById('dog')
-// dogPlace.innerHTML+=dog.printSpecies()
+/* ******  Class extension ****** */
 
-// let catPlace=document.getElementById('cat')
-// dogPlace.innerHTML+=cat.printClass()
+class Persian extends Cat {
+    features;
+    constructor(name, species, features){
+        super(name, species);
+        this.features = features;
+    }
+    showMsg(){
+        return `${super.getAnimalName()} is a ${super.getAnimalSpecies()} Cat and has these features:  ${this.features}`
+    }
+}
+
+//   Cat example
+let myCat= new Persian('Macho','persian','long Hair')
+console.log(myCat.showMessage())
+console.log(myCat.animalName)
+console.log(myCat.showMsg())
 
 
+let placeAnimals=document.getElementsByClassName('animal')[0];
+placeAnimals.innerHTML+=myCat.showMessage()
+placeAnimals.innerHTML+='<br>'
 
+placeAnimals.innerHTML+=myCat.showMsg()
+
+
+class Car{
+    constructor(brand,type){
+        this.carBrand=brand;
+        this.carType=type;
+    }
+    showBrand=()=> `The car is a ${this.carBrand} ${this.carType}`
+
+}
+
+let car1=new Car('Mercedes','coupe')
+console.log(car1.showBrand())
+
+let carElem=document.getElementsByClassName('car')[0]
+carElem.innerHTML=car1.showBrand()
 // let audi={
 //     country:'Germany',
 //     carBrand:'Audi',
